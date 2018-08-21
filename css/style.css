@@ -1,0 +1,53 @@
+6* {
+	box-sizing: border-box;
+	color: #333;
+}
+
+main {
+	padding: 1em;
+}
+
+h1 {
+	margin-top: 0em;
+}
+
+.pre {
+	display: inline-block;
+	margin-right: 1.5em;
+}
+
+#cv {
+	display: inline-block;
+	background-color: #333;
+	padding: 1em;
+	box-shadow: 2px 2px 4px #333;
+}
+
+#cv h3, #cv p {
+	color: #ccc;
+}
+
+#cv section:first-child h3 {
+	margin-top: 0em;
+}
+
+#cv section:last-child p:last-child {
+	margin-bottom: 0em;
+}
+
+.pre {
+	display: inline-block;
+	min-width: 150px;
+}
+
+#cv section:nth-child(1) .pre {
+	color: #03A9F4;
+}
+
+#cv section:nth-child(2) .pre {
+	color: #b56969;
+}
+
+#cv section:nth-child(3) .pre {
+	color: #e6af4b;
+}
