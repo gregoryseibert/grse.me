@@ -2,46 +2,91 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>grse.me</title>
-  <meta name="author" content="Gregory Seibert">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>grse.me</title>
+    <meta name="author" content="Gregory Seibert">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
 </head>
 
 <body>
+    <nav>
+        <a href="" id="toggle"><span></span><span></span><span></span></a>
+
+        <div id="menu">
+            <ul>
+                <li><a class="nav-link" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#bio">Bio</a></li>
+                <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
 	<main>
-		<h1>Willkommen auf meiner Webseite</h1>
-		
-		<article id="cv">
-			<section>
-				<h3>Allgemein</h3>
-				<p><span class="pre">Name: </span>Gregory Seibert</p>
-				<p><span class="pre">Geburtsdatum: </span>18.07.1996</p>
-				<p><span class="pre">Wohnort: </span>Stuttgart</p>	
-			</section>
-			<section>
-				<h3>Sprachen</h3>
-				<p><span class="pre">Muttersprache: </span>Deutsch</p>
-				<p><span class="pre">Gute Kenntnisse: </span>Englisch</p>
-				<p><span class="pre">Grundkenntnisse: </span>Französisch, Italienisch</p>
-			</section>
-			<section>
-				<h3>Informatik</h3>
-				<p><span class="pre">Fähigkeiten: </span>Java, Android, Spring Boot, Parse Server, PHP, JavaScript, C, C++, C#</p> 
-				<p><span class="pre">Projektmanagement: </span>Scrum, Jira</p>
-				<p><span class="pre">Sonstiges: </span>Linux (Administration), MySQL, PostgreSQL, Git, HTML, CSS, Office</p>
-			</section>
-		</article>
+        <article id="home" class="active text-center">
+            <h2>Welcome! I'm Gregory.</h2>
+            <p>I'm a developer based in Stuttgart, Germany.</p>
+            <p>Click on the menu button in the upper right corner to learn more.</p>
+        </article>
+        
+        <article id="about" class="text-center">
+            <h2>About</h2>
+            <p>I'm studying IT Automotive (B. Eng) at DHBW Stuttgart until 2019.<br>It's about automotive and electric engineering in the IT with the focus on connected cars and autonomous driving.</p>
+            <p>In my freetime I like to photography, learn about psychology or new foreign languages, going to the gym, cooking and spending time with my friends or family.</p>
+        </article>
+        
+        <article id="bio" class="text-center">
+            <h2>Bio</h2>
+            <table class="table-vertical">
+                <tr>
+                    <th>General</th>
+                </tr>
+                <tr>
+                    <td data-title="Name:">Gregory Seibert</td>
+                    <td data-title="Birthdate:">18.07.1996</td>
+                    <td data-title="Residence:">Stuttgart</td>
+                </tr>
+                <tr>
+                    <th>Languages</th>
+                </tr>
+                <tr>
+                    <td data-title="Native speaker:">German</td>
+                    <td data-title="Very good command:">English</td>
+                    <td data-title="Good command:">French</td>
+                    <td data-title="Basic skills:">Italian</td>
 
-		<br>
-		<br>
-
-		<a href="https://dashboard.grse.me" target="_blank">Zum Diensteverzeichnis</a>
+                </tr>
+                <tr>
+                    <th>IT skills</th>
+                </tr>
+                <tr>
+                    <td data-title="Programming languages:">Java and Android, C, C++, C#, PHP, JavaScript</td>
+                    <td data-title="Frameworks:">Spring Boot, Parse Server</td>
+                    <td data-title="Database:">MySQL, PostgreSQL, SQL</td>
+                    <td data-title="Others:">HTML, CSS, MS Office</td>
+                </tr>
+            </table>
+        </article>
+        
+        <article id="portfolio" class="text-center">
+            <h2>Portfolio</h2>
+            <p>Work in progress...</p>
+        </article>
+        
+        <div id="social-bar">
+            <a href="https://github.com/gregoryseibert/"><i class="icon-github-circled">&#xf09b;</i></a>
+            <a href="https://www.facebook.com/"><i class="icon-facebook">&#xf09a;</i></a>
+            <a href="https://www.instagram.com/"><i class="icon-instagram">&#xf16d;</i></a>
+        </div>
 	</main>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
