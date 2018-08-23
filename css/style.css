@@ -147,7 +147,9 @@ nav {
 
 #menu li a {
     position: relative;
-    margin-right:1em;
+    display: block;
+    margin-right: 1em;
+    padding: 0.25em;
     color: #FFF;
     overflow: hidden;
     opacity: 0;
@@ -177,12 +179,14 @@ nav {
 
 #menu li a::after {
     content: "";
-    display: block;
+    clear: both;
+    display: inline-block;
     position: absolute;
     right: 0;
-    padding-bottom: 0.03em;
-    bottom: 0px;
+    bottom: 0em;
+    height: 0.1em;
     width: 0;
+    padding-bottom: 0.03em;
     background: #1ABC9C;
     transition: all 0.5s;
 }
