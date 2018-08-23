@@ -28,22 +28,22 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 24px;
+  width: 2em;
+  height: 1.5em;
 }
 
 #toggle span {
     display: block;
-  width: 100%;
-  height: 5px;
-  background-color: #FFF;
-  transition: all 0.3s;
-  backface-visibility: hidden;
-  border-radius: 2px;
+    width: 100%;
+    height: 0.3em;
+    background-color: #FFF;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 0.15em;
 }
 
 #toggle.on span:first-child {
-  transform: rotate(45deg) translate(7px, 7px);
+  transform: rotate(45deg) translate(0.425em, 0.425em);
 }
 
 #toggle.on span:nth-child(2) {
@@ -51,18 +51,7 @@ nav {
 }
 
 #toggle.on span:last-child {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
-
-#toggle.on + #menu {
-  opacity: 1;
-  visibility: visible;
-}
-
-#menu {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .4s;
+  transform: rotate(-45deg) translate(0.425em, -0.425em);
 }
 
 #menu ul {
@@ -70,22 +59,102 @@ nav {
 }
 
 ul, li, li a {
-  list-style: none;
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-li a {
-  padding: 5px;
-  color: #FFF;
-  text-decoration: none;
-  transition: all .2s;
-}
-
-li a:hover::after, li a:focus::after {
+    list-style: none;
     display: block;
+    margin: 0em;
+    padding: 0em;
+}
+
+#menu li a {
+    position: relative;
+    margin-right:1em;
+    color: #FFF;
+    text-decoration: none;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.75s ease-in-out;
+}
+
+#menu li:nth-child(1) a {
+    transition-delay: 0s;
+}
+
+#menu li:nth-child(2) a {
+    transition-delay: 0.1s;
+}
+
+#menu li:nth-child(3) a {
+    transition-delay: 0.2s;
+}
+
+#menu li:nth-child(4) a {
+    transition-delay: 0.3s;
+}
+
+#menu li:nth-child(5) a {
+    transition-delay: 0.4s;
+}
+
+#toggle.on + #menu li a {
+    visibility: visible;
+    opacity: 1;
+}
+
+#toggle.on + #menu li:nth-child(1) a {
+    transition-delay: 0.4s;
+}
+
+#toggle.on + #menu li:nth-child(2) a {
+    transition-delay: 0.3s;
+}
+
+#toggle.on + #menu li:nth-child(3) a {
+    transition-delay: 0.2s;
+}
+
+#toggle.on + #menu li:nth-child(4) a {
+    transition-delay: 0.1s;
+}
+
+#toggle.on + #menu li:nth-child(5) a {
+    transition-delay: 0s;
+}
+
+#menu li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    padding-bottom: 1.2px;
+    bottom: 0px;
+    width: 0;
+    background: #1ABC9C;
+    transition: all .25s;
+}
+
+#menu li a:hover::after {
+    left: 0;
+    right: auto;
     width: 100%;
-    height: 1px;
-  background: #1ABC9C;
+}
+
+@keyframes fadein{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeout{
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-webkit-keyframes fadeout{
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
