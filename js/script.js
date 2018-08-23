@@ -5,6 +5,27 @@ theToggle.onclick = function() {
    return false;
 }
 
+var links = document.getElementsByClassName("nav-link");
+var currentContent = document.getElementsByClassName("active")[0];
+
+for(var i = 0, len = links.length; i < len; i++) {
+    links[i].onclick = linkClicked;
+}
+    
+function linkClicked() {
+    if(currentContent != null) {
+        removeClass(currentContent, "active");
+    }
+    
+    var linkName = this.getAttribute("href").slice(1);
+    var article = document.getElementById(linkName);
+    addClass(article, "active");
+    
+    currentContent = article;
+    
+    return false;
+}
+
 // based on Todd Motto functions
 // https://toddmotto.com/labs/reusable-js/
 
