@@ -244,6 +244,7 @@ main article p:last-child {
 
 .table-vertical {
     width: 66%;
+    max-width: 31.25em;
     margin: 0 auto;
     color: #FFF;
 }
