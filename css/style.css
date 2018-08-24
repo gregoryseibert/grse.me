@@ -66,14 +66,14 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #FAFAFA;
-    padding: 1.5em;
+    padding: 2em;
 }
 
 nav {
     position: absolute;
-    top: 1.5em;
-    left: 1.5em;
-    right: 1.5em;
+    top: 2em;
+    left: 2em;
+    right: 2em;
     z-index: 2;
     display: flex;
     justify-content: flex-start;
@@ -191,7 +191,7 @@ nav {
     transition: all 0.5s;
 }
 
-#menu li a:hover::after {
+#menu li a:hover::after, #menu li a:focus::after {
     left: 0;
     right: auto;
     width: 100%;
@@ -298,11 +298,11 @@ main article p:last-child {
     border: 1px solid transparent;
 }
 
-#social-bar a:hover {
+#social-bar a:hover, #social-bar a:focus {
     border: 1px solid #1ABC9C;
 }
 
-#social-bar a:hover i {
+#social-bar a:hover i, #social-bar a:focus i {
     color: #1ABC9C;
 }
 
@@ -325,12 +325,18 @@ main article p:last-child {
     }
 }
 
-@media only screen and (max-width: 25em) {
+@media only screen and (max-width: 28em) {
     #toggle {
         display: none;
     }
     
+    #menu {
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
     #menu li a {
+        margin: 0em 0.5em;
         opacity: 1;
         visibility: visible;
     }
