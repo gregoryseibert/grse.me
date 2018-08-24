@@ -279,23 +279,23 @@ main article p:last-child {
 
 #social-bar {
     position: absolute;
-    right: 1.5em;
-    bottom: 1.5em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
     z-index: 2;
 }
 
 #social-bar a {
     display: inline-block;
-    margin: 1em 1em;
+    margin-left: 1em;
     padding: 0.7em 0.5em;
     border-radius: 100%;
     background-color: #FFF;
     transition: border 0.25s;
     border: 1px solid transparent;
-}
-
-#social-bar a:last-child {
-    margin-right: 1em;
 }
 
 #social-bar a:hover {
@@ -315,9 +315,7 @@ main article p:last-child {
 
 @media only screen and (max-width: 50em) {
     #social-bar {
-        display: flex;
         justify-content: center;
-        left: 1.5em;
     }
 }
 
