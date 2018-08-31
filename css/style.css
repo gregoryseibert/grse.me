@@ -217,9 +217,9 @@ nav {
 }
 
 #menu li:nth-child(4) a {
-    -webkit-transition-delay: 0.1.5s;
-         -o-transition-delay: 0.1.5s;
-            transition-delay: 0.1.5s;
+    -webkit-transition-delay: 0.15s;
+         -o-transition-delay: 0.15s;
+            transition-delay: 0.15s;
 }
 
 #menu li:nth-child(5) a {
